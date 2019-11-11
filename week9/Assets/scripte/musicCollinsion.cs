@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class musicCollinsion : MonoBehaviour
 {
-    AudioSource baby; //create a field for the AudioSource "audio"
+    AudioSource ding; //create a field for the AudioSource "audio"
 
     // Start is called before the first frame update
     void Start()
     {
-        baby = this.gameObject.GetComponent<AudioSource>(); //get the AudioSource component from this gameObject
+        ding  = this.gameObject.GetComponent<AudioSource>(); //get the AudioSource component from this gameObject
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class musicCollinsion : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
        if (collision.gameObject.name == "player")
-        baby.Play(); //play the audio
+        ding.Play(); //play the audio
        
     }
 
